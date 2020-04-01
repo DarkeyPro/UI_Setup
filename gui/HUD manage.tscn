@@ -1,0 +1,155 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/button/jump.gd" type="Script" id=1]
+[ext_resource path="res://gui/joystick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/HUD.gd" type="Script" id=3]
+[ext_resource path="res://scripts/button/attack.gd" type="Script" id=4]
+[ext_resource path="res://gui/nav.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui/dialog.tscn" type="PackedScene" id=7]
+[ext_resource path="res://gui/player_ui.tscn" type="PackedScene" id=10]
+[ext_resource path="res://gui/screen_blur.tscn" type="PackedScene" id=11]
+
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nav" parent="HBoxContainer" instance=ExtResource( 5 )]
+margin_bottom = 30.0
+
+[node name="body" type="HBoxContainer" parent="HBoxContainer"]
+margin_top = 34.0
+margin_right = 1280.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 0, 300 )
+rect_pivot_offset = Vector2( 1077.9, 4 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/body"]
+margin_right = 424.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/body"]
+margin_left = 428.0
+margin_right = 852.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/body"]
+margin_left = 856.0
+margin_right = 1280.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="control" type="MarginContainer" parent="HBoxContainer"]
+margin_top = 372.0
+margin_right = 1280.0
+margin_bottom = 706.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/control"]
+margin_right = 1280.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="joystick container" type="CenterContainer" parent="HBoxContainer/control/HBoxContainer"]
+margin_right = 351.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/control/HBoxContainer/joystick container"]
+margin_left = 175.0
+margin_top = 167.0
+margin_right = 175.0
+margin_bottom = 167.0
+
+[node name="Sprite" parent="HBoxContainer/control/HBoxContainer/joystick container/Control" instance=ExtResource( 2 )]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 31, 10 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="statues" type="VBoxContainer" parent="HBoxContainer/control/HBoxContainer"]
+margin_left = 355.0
+margin_right = 924.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.62
+custom_constants/separation = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/control/HBoxContainer/statues"]
+margin_right = 569.0
+margin_bottom = 126.0
+size_flags_vertical = 3
+
+[node name="dialog" parent="HBoxContainer/control/HBoxContainer/statues" instance=ExtResource( 7 )]
+margin_top = 138.0
+margin_right = 569.0
+margin_bottom = 264.0
+
+[node name="ui" parent="HBoxContainer/control/HBoxContainer/statues" instance=ExtResource( 10 )]
+margin_top = 276.0
+margin_right = 569.0
+margin_bottom = 333.0
+
+[node name="buttons" type="GridContainer" parent="HBoxContainer/control/HBoxContainer"]
+margin_left = 928.0
+margin_right = 1280.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/control/HBoxContainer/buttons"]
+margin_right = 116.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="custom_button" type="Button" parent="HBoxContainer/control/HBoxContainer/buttons"]
+margin_left = 120.0
+margin_right = 236.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_top = 710.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="screen_blur" parent="." instance=ExtResource( 11 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+blur = 0.0

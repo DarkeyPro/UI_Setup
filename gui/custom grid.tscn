@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/custom_grid.gd" type="Script" id=1]
+[ext_resource path="res://theme/test_theme.tres" type="Theme" id=2]
+
+
+[node name="custom grid" type="Container"]
+anchor_left = 0.174909
+anchor_top = 0.233106
+anchor_right = 0.507441
+anchor_bottom = 1.00334
+margin_left = 0.116997
+margin_top = 0.164001
+margin_right = -1.52505
+margin_bottom = -2.40399
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+Fit_type = 2
+padding = {
+"bottom": 0,
+"left": 0,
+"right": 0,
+"top": 0
+}
+rows = 3
+columns = 2
+cell_size = Vector2( 197, 177.333 )
+spaceing = Vector2( 15, 10 )
+fit_x = true
+fit_y = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 197.0
+margin_bottom = 177.333
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer50" type="PanelContainer" parent="."]
+margin_left = 212.0
+margin_right = 409.0
+margin_bottom = 177.333
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer42" type="PanelContainer" parent="."]
+margin_top = 187.333
+margin_right = 197.0
+margin_bottom = 364.667
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer43" type="PanelContainer" parent="."]
+margin_left = 212.0
+margin_top = 187.333
+margin_right = 409.0
+margin_bottom = 364.667
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelContainer44" type="PanelContainer" parent="."]
+margin_top = 374.667
+margin_right = 197.0
+margin_bottom = 552.0
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
