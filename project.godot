@@ -13,11 +13,45 @@ _global_script_classes=[ {
 "class": "custom_Container",
 "language": "GDScript",
 "path": "res://scripts/custom_grid.gd"
+}, {
+"base": "Resource",
+"class": "item",
+"language": "GDScript",
+"path": "res://item.gd"
 } ]
 _global_script_class_icons={
-"custom_Container": ""
+"custom_Container": "",
+"item": ""
 }
 
 [application]
 
 config/name="Ui Setup"
+run/main_scene="res://shop.tscn"
+GameInfo/version="0.0.1"
+
+[autoload]
+
+CustomFunctions="*res://scripts/custom_function.gd"
+
+[display]
+
+window/size/width=740
+window/size/height=360
+
+[input]
+
+L={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+R={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true

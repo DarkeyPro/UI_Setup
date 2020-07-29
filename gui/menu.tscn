@@ -1,0 +1,463 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/custom_grid.gd" type="Script" id=1]
+[ext_resource path="res://scripts/menu.gd" type="Script" id=2]
+
+[node name="menu" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 40
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panle" type="Container" parent="."]
+margin_right = 740.0
+script = ExtResource( 1 )
+Fit_type = 4
+padding = {
+"bottom": 0,
+"left": 10,
+"right": 30,
+"top": 10
+}
+rows = 1
+columns = 5
+cell_size = Vector2( 136, -10 )
+spaceing = Vector2( 10, 0 )
+fit_x = true
+fit_y = true
+
+[node name="Panel5" type="Button" parent="panle"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 146.0
+margin_bottom = 30.0
+text = "profile"
+
+[node name="Panel" type="Button" parent="panle"]
+margin_left = 156.0
+margin_top = 10.0
+margin_right = 292.0
+margin_bottom = 30.0
+text = "play"
+
+[node name="Panel2" type="Button" parent="panle"]
+margin_left = 302.0
+margin_top = 10.0
+margin_right = 438.0
+margin_bottom = 30.0
+text = "custumize"
+
+[node name="Panel3" type="Button" parent="panle"]
+margin_left = 448.0
+margin_top = 10.0
+margin_right = 584.0
+margin_bottom = 30.0
+text = "shop"
+
+[node name="Panel4" type="Button" parent="panle"]
+margin_left = 594.0
+margin_top = 10.0
+margin_right = 730.0
+margin_bottom = 30.0
+text = "setting"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_top = 40.0
+margin_right = 740.0
+margin_bottom = 360.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_left = 10
+
+[node name="slide" type="Container" parent="MarginContainer"]
+margin_left = 10.0
+margin_right = 725.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 4
+padding = {
+"bottom": 10,
+"left": 10,
+"right": 10,
+"top": 10
+}
+rows = 1
+columns = 3
+cell_size = Vector2( 225, 300 )
+spaceing = Vector2( 10, 0 )
+fit_x = true
+fit_y = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 235.0
+margin_bottom = 310.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panle3" type="Container" parent="MarginContainer/slide"]
+margin_left = 245.0
+margin_top = 10.0
+margin_right = 470.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 20, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 3
+padding = {
+"bottom": 0,
+"left": 0,
+"right": 0,
+"top": 10
+}
+rows = 2
+columns = 1
+cell_size = Vector2( 225, 135 )
+spaceing = Vector2( 0, 10 )
+fit_x = true
+fit_y = true
+
+[node name="Panel3" type="Panel" parent="MarginContainer/slide/panle3"]
+margin_top = 10.0
+margin_right = 225.0
+margin_bottom = 145.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide/panle3"]
+margin_top = 155.0
+margin_right = 225.0
+margin_bottom = 290.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel4" type="Panel" parent="MarginContainer/slide"]
+margin_left = 480.0
+margin_top = 10.0
+margin_right = 705.0
+margin_bottom = 310.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slide2" type="Container" parent="MarginContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 725.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 4
+padding = {
+"bottom": 10,
+"left": 20,
+"right": 20,
+"top": 10
+}
+rows = 1
+columns = 4
+cell_size = Vector2( 164.75, 301 )
+spaceing = Vector2( 10, 0 )
+fit_x = true
+fit_y = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide2"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 184.75
+margin_bottom = 311.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="MarginContainer/slide2"]
+margin_left = 194.75
+margin_top = 10.0
+margin_right = 359.5
+margin_bottom = 311.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel4" type="Panel" parent="MarginContainer/slide2"]
+margin_left = 369.5
+margin_top = 10.0
+margin_right = 534.25
+margin_bottom = 311.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel5" type="Panel" parent="MarginContainer/slide2"]
+margin_left = 544.25
+margin_top = 10.0
+margin_right = 709.0
+margin_bottom = 311.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slide3" type="Container" parent="MarginContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 725.0
+margin_bottom = 320.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+Fit_type = 1
+padding = {
+"bottom": 10,
+"left": 30,
+"right": 30,
+"top": 10
+}
+rows = 1
+columns = 2
+cell_size = Vector2( 309.5, 301 )
+spaceing = Vector2( 20, 0 )
+fit_x = true
+fit_y = true
+
+[node name="panle5" type="Container" parent="MarginContainer/slide3"]
+margin_left = 30.0
+margin_top = 10.0
+margin_right = 339.5
+margin_bottom = 311.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 3
+padding = {
+"bottom": 0,
+"left": 0,
+"right": 0,
+"top": 10
+}
+rows = 2
+columns = 1
+cell_size = Vector2( 309.5, 135.5 )
+spaceing = Vector2( 0, 10 )
+fit_x = true
+fit_y = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide3/panle5"]
+margin_top = 10.0
+margin_right = 309.5
+margin_bottom = 145.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="MarginContainer/slide3/panle5"]
+margin_top = 155.5
+margin_right = 309.5
+margin_bottom = 291.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panle6" type="Container" parent="MarginContainer/slide3"]
+margin_left = 359.5
+margin_top = 10.0
+margin_right = 669.0
+margin_bottom = 311.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 3
+padding = {
+"bottom": 10,
+"left": 0,
+"right": 0,
+"top": 10
+}
+rows = 3
+columns = 1
+cell_size = Vector2( 309.5, 87 )
+spaceing = Vector2( 0, 10 )
+fit_x = true
+fit_y = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide3/panle6"]
+margin_top = 10.0
+margin_right = 309.5
+margin_bottom = 97.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="MarginContainer/slide3/panle6"]
+margin_top = 107.0
+margin_right = 309.5
+margin_bottom = 194.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel4" type="Panel" parent="MarginContainer/slide3/panle6"]
+margin_top = 204.0
+margin_right = 309.5
+margin_bottom = 291.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slide4" type="Container" parent="MarginContainer"]
+visible = false
+margin_left = 10.0
+margin_right = 725.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 20, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 4
+padding = {
+"bottom": 10,
+"left": 10,
+"right": 10,
+"top": 10
+}
+rows = 1
+columns = 3
+cell_size = Vector2( 226.333, 301 )
+spaceing = Vector2( 10, 0 )
+fit_x = true
+fit_y = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide4"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 236.333
+margin_bottom = 311.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/slide4/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+text = "start"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panle3" type="Container" parent="MarginContainer/slide4"]
+margin_left = 246.333
+margin_top = 10.0
+margin_right = 472.667
+margin_bottom = 311.0
+rect_min_size = Vector2( 20, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 3
+padding = {
+"bottom": 0,
+"left": 0,
+"right": 0,
+"top": 10
+}
+rows = 2
+columns = 1
+cell_size = Vector2( 226.333, 135.5 )
+spaceing = Vector2( 0, 10 )
+fit_x = true
+fit_y = true
+
+[node name="Panel3" type="Panel" parent="MarginContainer/slide4/panle3"]
+margin_top = 10.0
+margin_right = 226.333
+margin_bottom = 145.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide4/panle3"]
+margin_top = 155.5
+margin_right = 226.333
+margin_bottom = 291.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panle4" type="Container" parent="MarginContainer/slide4"]
+margin_left = 482.667
+margin_top = 10.0
+margin_right = 709.0
+margin_bottom = 311.0
+rect_min_size = Vector2( 20, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Fit_type = 3
+padding = {
+"bottom": 10,
+"left": 0,
+"right": 0,
+"top": 0
+}
+rows = 2
+columns = 1
+cell_size = Vector2( 226.333, 135.5 )
+spaceing = Vector2( 0, 10 )
+fit_x = true
+fit_y = true
+
+[node name="Panel3" type="Panel" parent="MarginContainer/slide4/panle4"]
+margin_right = 226.333
+margin_bottom = 135.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="MarginContainer/slide4/panle4"]
+margin_top = 145.5
+margin_right = 226.333
+margin_bottom = 281.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

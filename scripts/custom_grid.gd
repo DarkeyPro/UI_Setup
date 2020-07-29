@@ -27,9 +27,11 @@ func containe():
 		columns = int(ceil(get_child_count()/float(rows)))
 	
 	var check_padding = true if padding.bottom >0 else false
-#	((padding.bottom+(spaceing.y*float(check_padding))/rows))
-	print(((padding.bottom+(spaceing.y*float(check_padding)))/float(rows)))
 	var cell_rect= Vector2(0,0)
+	if rows== 0:
+		rows =1
+	if columns ==0:
+		columns =1
 	cell_rect.y = rect_size.y /float(rows) - ((spaceing.y/float(rows))*2)-(padding.top/float(rows)) - (padding.bottom/float(rows))
 	cell_rect.x = rect_size.x /float(columns)-((spaceing.x/float(columns))*2) - (padding.left/float(columns))-(padding.right/float(columns))
 	
@@ -48,4 +50,5 @@ func containe():
 		i.rect_position =Vector2(xpos,ypos)
 		i.rect_size =cell_size
 		count+=1
-		pass
+func _set_size(value):
+	containe()
